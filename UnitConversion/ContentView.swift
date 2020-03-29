@@ -97,14 +97,14 @@ struct ContentView: View {
                             if calculation <= 1 {
                                 //  1以下だったら単位の末尾からsを抜いて表示
                                 if calculation.truncatingRemainder(dividingBy: 1) == 0 {
-                                    Text("\(calculation, specifier: "%.0f") \(unit[outputUnit])")
+                                    Text("\(calculation, specifier: "%g") \(unit[outputUnit])")
                                 } else {
                                     Text("\(calculation, specifier: "%.3f") \(unit[outputUnit])")
                                 }
                                 
                             } else {
                                 if calculation.truncatingRemainder(dividingBy: 1) == 0 {
-                                    Text("\(calculation, specifier: "%.0f") \(units[outputUnit])")
+                                    Text("\(calculation, specifier: "%g") \(units[outputUnit])")
                                 } else {
                                     Text("\(calculation, specifier: "%.3f") \(units[outputUnit])")
                                 }
